@@ -17,5 +17,23 @@ let mySprite = sprites.create(img`
     2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
     `, SpriteKind.Player)
 mySprite.setPosition(80, 60)
-mySprite.setVelocity(0, 15)
-controller.moveSprite(mySprite, 100, 100)
+let MySprite2 = sprites.create(img`
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 1 1 1 1 1 7 7 1 1 1 1 1 7 7 
+    7 7 1 1 1 1 1 7 7 1 1 1 1 1 7 7 
+    7 7 f f f 1 1 7 7 f f f 1 1 7 7 
+    7 7 f f f 1 1 7 7 f f f 1 1 7 7 
+    7 7 f f f 1 1 7 7 f f f 1 1 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 4 4 4 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 4 4 4 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 4 4 4 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+    `, SpriteKind.Enemy)
+controller.moveSprite(mySprite)
+MySprite2.follow(mySprite)
